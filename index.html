@@ -1,13 +1,131 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            WEATHER-APP
-        </title>
-    </head>
-    <body>
-        <input><p>loaction</p></input>
-        <h1>tempture</h1>
-        <p>current weather condition</p>
-    </body>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="weather-app">
+    <!-- SEARCH -->
+    <section id="search-section">
+        <div id="search-box">
+            <input
+                type="text"
+                id="city"
+                placeholder="Search city..."
+                autocomplete="off"
+            >
+            <button id="search">🔍</button>
+            <div id="suggestions"></div>
+        </div>
+    </section>
+    <!-- CURRENT WEATHER -->
+    <section id="weather-section">
+        <div id="weather-icon">☀️</div>
+        <h4 id="location">LOCATION</h4>
+        <h1>--°C</h1>
+        <p>Weather condition</p>
+        <p>Feels like --°</p>
+    </section>
+    <!-- HOURLY -->
+    <section id="Hourly-forecast">
+        <h2>Hourly forecast</h2>
+        <div id="hourly-container"></div>
+    </section>
+    <!-- DAILY -->
+    <section id="daily-forecast">
+        <h2>Daily forecast</h2>
+        <div id="daily-container"></div>
+    </section>
+    <!-- WEATHER DETAILS -->
+    <section id="weather-details">
+        <div class="detail-card">
+            <div class="detail-icon">💧</div>
+            <div class="detail-info">
+                <span>Humidity</span>
+                <strong>--%</strong>
+            </div>
+            <div class="detail-bar">
+                <div id="humidity-fill"></div>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-icon">💨</div>
+            <div class="detail-info">
+                <span>Wind</span>
+                <strong>-- km/h</strong>
+            </div>
+            <div class="wind-animation">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-icon">👁️</div>
+            <div class="detail-info">
+                <span>Visibility</span>
+                <strong>-- km</strong>
+            </div>
+            <div class="detail-bar">
+                <div id="visibility-fill"></div>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-icon">◉</div>
+            <div class="detail-info">
+                <span>Pressure</span>
+                <strong>---- hPa</strong>
+            </div>
+            <div class="pressure-circle">
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <!-- SUN & MOON -->
+    <section id="astronomy-section">
+        <h2>Sun & Moon</h2>
+        <div id="astronomy-container">
+            <!-- SUN -->
+            <div class="astronomy-card">
+                <div class="sun-visual">
+                    ☀️
+                </div>
+                <h3>Sun</h3>
+                <div class="astro-time">
+                    <div>
+                        <span>🌅 Sunrise</span>
+                        <strong id="sunrise">--:--</strong>
+                    </div>
+                    <div>
+                        <span>🌇 Sunset</span>
+                        <strong id="sunset">--:--</strong>
+                    </div>
+                </div>
+            </div>
+            <!-- MOON -->
+            <div class="astronomy-card">
+                <div id="moon-visual">
+                    🌙
+                </div>
+                <h3 id="moon-phase">Moon</h3>
+                <p id="moon-illumination">
+                    --% illuminated
+                </p>
+                <div class="astro-time">
+                    <div>
+                        <span>🌙 Moonrise</span>
+                        <strong id="moonrise">--:--</strong>
+                    </div>
+                    <div>
+                        <span>🌘 Moonset</span>
+                        <strong id="moonset">--:--</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
